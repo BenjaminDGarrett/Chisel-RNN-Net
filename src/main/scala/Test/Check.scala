@@ -43,8 +43,8 @@ class Driver(bitwidth: Int, layer: Int) extends Module {
     val reg6 = RegInit(io.h * io.W_y)
     val reg7 = RegInit(reg6 + io.B_y)
     // uses Linear activation function in replace for the Sigmoid Activation Function
-    val reg8 = RegInit(reg7*reg4)
-
+    //val reg8 = RegInit(reg7*reg4)
+    val reg8 = RegInit(reg7 << 2 )
 
     //val reg4 = RegInit(io.e * (reg3))
     //val reg5 = RegInit(io.e * (-reg3))
