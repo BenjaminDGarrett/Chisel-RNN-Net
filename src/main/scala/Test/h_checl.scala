@@ -36,9 +36,9 @@ class h_checl(bitwidth: Int, layer: Int) extends Module {
     val reg2 = RegInit(io.h * io.W_h)
     val reg3 = RegInit(reg1 + reg2 + io.B_x)
     // the first activation function is going to be a usage of a speed Sigmoid function
-    val reg4 = RegInit((1.U+(reg3/1.U +(reg3))))
+    val reg4 = RegInit((1.U + (reg3 / 1.U + (reg3))))
+    io.y := reg4
   }
-  io.y := reg4
 }
 
 object h_checl {
